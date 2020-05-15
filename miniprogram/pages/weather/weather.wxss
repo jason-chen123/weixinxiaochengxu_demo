@@ -1,0 +1,45 @@
+/* pages/weather/weather.wxss */
+.wrap{
+  margin-top: 20rpx;
+  /* display: flex; */
+  height: 600rpx;
+  /* flex-direction: column */
+}
+.city{
+  font-size:50rpx;
+  font-weight: 500
+}
+.wind{
+  /* color:#71b425ab */
+}
+.bgimg{
+  height: 481.5rpx;
+position: absolute;
+width: 100%;
+z-index: -1;
+}
+.middle{
+  /* background: url('/images/duoyun.jpg'); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 481.5rpx;
+  align-items: center;
+}
+.middle>.temp{
+  /* text-align: center; */
+  font-size: 150rpx;
+  margin-left: 68rpx;
+}
+.weather-info{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+}
+.colum{
+  width: 100%;
+  height: 50rpx;
+  padding: 20rpx;
+  border-bottom: 1px solid #dddddd
+}

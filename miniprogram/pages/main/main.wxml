@@ -1,0 +1,47 @@
+<!--pages/main/main.wxml-->
+<wxs src="../../filter.wxs" module='m'></wxs>
+<view class="contain">
+<van-cell title="选择单个日期" value="{{ date }}" bind:click="onDisplay" />
+<van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" />
+<view class="swipe"><swiper autoplay="true" interval="3000"><swiper-item><image src="/images/swipe1.jpg"></image></swiper-item> <swiper-item><image src="/images/swipe2.jpg"></image></swiper-item>
+ <swiper-item><image src="/images/swipe3.jpg"></image></swiper-item></swiper></view>
+<view class="content">
+    <view class="content_wrap"> 
+    <view class="map" bindtap="jumpToMap"><image class="icon_address" src="/images/address.png"></image> 成都大熊猫繁育研究基地一键导航 <image class='icon_map' src="/images/arrow.png"></image> </view>
+              <view class="date">
+                  <view bindtap="changeColor" data-onshow='1' class="{{onshow=='1' ? 'view_active' :''}}">{{m.my_time(year,month,date,now)}}<text data-onshow='1'>今天</text></view>
+                  <view bindtap="changeColor" data-onshow='2' class="{{onshow=='2' ? 'view_active' :''}}">{{m.my_time(year,month,date+1,now)}}<text data-onshow='2'>明天</text></view>
+                  <view bindtap="changeColor" data-onshow='3' class="{{onshow=='3' ? 'view_active' :''}}">{{m.my_time(year,month,date+2,now)}}<text data-onshow='3'>后天</text></view>
+                  <view bindtap="moreDate">更多日期</view>
+              </view>
+                <view class="ticket">
+                <view><text class='ticket_ch'>门票</text><text class='ticket_en'>Ticket</text> </view>
+                  <text class="yuding">预定须知</text>
+              </view>
+              <template name="item">
+            <view class="item">
+            <image src="/images/xiongmao.jpg" class="pic"></image>
+                  <text class="desc">{{each.title}}</text>
+                  <text class="tips">{{each.buyTips}}</text>
+                  <text class="buyTips">购买须知</text>
+                  <text class="price">{{each.price}}</text>
+                  <view class="btn_wrap"><text class="btn" data-index="1" bindtap="reduce" data-id="{{index}}" >-</text><text class="count">{{each.count}}</text><text class="btn btn2" data-id="{{index}}" bindtap="add">+</text></view>
+            </view>     
+              </template>
+              <block wx:for="{{item}}" wx:for-item='each' wx:key="index"><template is="item" data="{{each:each,index:index}}" ></template></block>
+
+    </view>
+  <view class="content_wrap content_wraptop">
+  <text class="tourist">游客信息 <text class="tourist_en">Tourist information</text></text>
+  <view class="tourist_msg">
+  <view class="name"><text class="col">出游人</text><input class="col_l" placeholder="请填写游客姓名 Fill in the name"></input><text class='col must'>必填</text></view>
+    <view class="name"><text class="col">身份证</text><input class="col_l" placeholder="请填写身份证 ID card "></input><text class='col must'>必填</text></view>
+      <view class="name"><text class="col">手机号</text><input class="col_l" placeholder="请填写手机号 Fill the phone number "></input><button open-type="getPhoneNumber" class='col must phone' style="color:#000;width:180rpx" bindgetphonenumber="getPhoneNumber">获取手机号</button></view>
+  </view>
+  </view>
+</view>
+<view class="private_wrap"><checkbox checked="{{ifagree}}" bindtap="changeAgree"></checkbox><text>我已阅读并同意 <text class="private">《用户隐私协议》</text> </text></view>
+<view style="height:80rpx"></view>
+
+<view class="pay"><text>合计：￥{{total}}</text> <text class="btn_pay" bindtap="pay">去支付 pay</text></view>
+</view>

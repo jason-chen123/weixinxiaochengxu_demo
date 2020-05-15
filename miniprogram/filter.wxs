@@ -1,0 +1,33 @@
+function my_time(a,b,c,now) {
+  var a=parseInt(a);
+  var b=parseInt(b);
+  var c =parseInt(c);
+  var now = parseInt(now)
+  var nextDate=c+1;
+  if(nextDate>now&&b==12){
+    return (1+'月'+1);
+  }
+  else if (nextDate>now && b<12){
+    return (b+1+'月'+1);
+  }
+  else{
+    return (b+'月'+c)
+  }
+  // switch(now){
+  //   case nextDate > (now) && b==12:
+  //     return (1 + '月' + 1);
+  //     break;
+  //   case nextDate > now && b<12:
+  //   return (b+1+'月'+1);
+  //   break;
+  //   default: return (b+'月'+c+1)
+  // }
+}
+function getDays(year,month){
+  let now = new Date(year,month,0).getDate();
+  return now
+}
+module.exports = {
+  my_time: my_time,
+  getDays: getDays
+}

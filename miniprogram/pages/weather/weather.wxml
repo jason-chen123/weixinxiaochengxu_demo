@@ -1,0 +1,20 @@
+<!--pages/weather/weather.wxml-->
+<view class="wrap">
+  
+  <div class="middle"style="background-image: url({{img[count]}});" > 
+  <!-- <image src="{{img[count]}}" class="bgimg" style="background-image: url({{img[count]}});"></image> -->
+  <text class="city">{{weather.city}}</text>
+      <text class="temp">{{weather.tem}}°</text> 
+      <text class="wind">{{weather.wea}}/{{weather.win}}{{weather.win_speed}}</text>
+      <!-- <button type="primary" size="" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="primary" bindtap="getWeather"> 54 良 </button> -->
+  </div>
+  <view class="weather-info">
+      <textarea fixed placeholder="请查询城市" class="colum" bindinput="getValue" ></textarea>
+     <div class="time colum"> 更新时间：{{weather.update_time}}</div>
+     <div class="colum">白天平均气温：{{weather.tem_day}}°</div>
+     <div class="colum">夜晚平均气温：{{weather.tem_night }}°</div>
+  </view>
+   <button type="primary" size="" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="primary" bindtap="getWeather" bindtap="search">查询</button>
+</view>

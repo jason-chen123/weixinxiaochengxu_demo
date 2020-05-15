@@ -1,0 +1,275 @@
+/* pages/main/main.wxss */
+.contain{
+  height: 100%;
+  background: rgb(240, 220, 224)
+}
+.swipe{
+  height: 400rpx;
+  width: 100%;
+  overflow: hidden;
+  
+}
+swiper{
+  height: 100%;
+  margin: 0 18rpx;
+}
+.swipe image{
+  height: 100%;
+  width: 100%;
+
+}
+.content{
+   margin: 0 18rpx;
+   background: #fff
+}
+.content_wrap{
+  padding: 30rpx;
+  border-radius: 20rpx;
+  border-bottom: 15rpx dotted rgba(255, 0, 0, 0.24);
+}
+.content_wraptop.content_wrap{
+  /* border-top: 15rpx dotted rgba(255, 0, 0, 0.24); */
+  border-bottom: none
+}
+/* .content_wraptop{
+  padding: 20rpx 0;
+  border-bottom: 1px solid 
+} */ 
+.map{
+font-size: 27rpx;
+position: relative;
+margin-bottom: 20rpx;
+color: red
+}
+.icon_map{
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;
+  right: 0;
+}
+.icon_address{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: top
+}
+/* .map::after{
+  content: url('images/arrow/png');
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;
+  right: 0;
+  bottom: 20rpx;
+} */
+.date{
+  font-size: 25rpx;
+  display: flex;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 30rpx;
+  overflow: hidden;
+  /* background: red */
+}
+.date view{
+  flex:1;
+  text-align: center;
+}
+.date .view_active{
+   background: linear-gradient(to right, orange, red);
+}
+.date view>text{
+  font-size: 18rpx;
+  padding-left:10rpx;
+  color: #cec0c0
+}
+.ticket .ticket_ch{
+  font-weight: 600
+}
+.ticket .ticket_en{
+  font-size: 20rpx;
+  margin-left: 20rpx;
+}
+.ticket{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx 0
+}
+.yuding{
+  color: red;
+  font-size: 19rpx
+}
+/* 熊猫照片 */
+.pic{
+  height: 180rpx;
+  width: 180rpx;
+  display: inline-block;
+  background:#cec0c0
+}
+.desc{
+  display: inline-block;
+  padding-left:15rpx;
+  font-size: 1rem;
+  position: absolute;
+
+}
+.item{
+  height: 200rpx;
+  position: relative;
+  border-top: 1px solid #cec0c0;
+  border-bottom: 1px spolid #cec0c0;
+  padding-top: 10rpx 
+}
+.buyTips{
+  display: inline-block;
+bottom: 0;
+position: absolute;
+left: 180rpx;
+padding: 30rpx;
+font-size: 20rpx;
+color: rgb(255, 38, 0)
+}
+.tips{
+  position: absolute;
+  font-size: 20rpx;
+  top: 56rpx;
+  margin-left: 20rpx;
+  padding: 8rpx 20rpx;
+  border: 1px solid rgb(240, 220, 224);
+  border-radius: 30rpx
+}
+/* .desc::before{
+  content:'适用于成人，请携带绿色健康码';
+  position: absolute;
+  font-size: 20rpx;
+  top: 56rpx;
+  margin-left: 20rpx;
+  width: 280rpx;
+  padding: 8rpx 20rpx;
+  border: 1px solid rgb(240, 220, 224);
+  border-radius: 30rpx
+} */
+.price{
+  position: absolute;
+  right:10rpx;
+  top:50rpx;
+  color: red
+}
+.btn_wrap{
+  width:200rpx;
+  height: 100rpx;
+  /* background: red; */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  line-height: 100rpx;
+  text-align: center
+}
+.btn_wrap .count{
+  margin: 0 20rpx
+}
+.btn{
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 10rpx;
+  background: rgba(204, 194, 194, 0.712)
+}
+.btn.btn2{
+  background: lightcoral
+}
+.tourist{
+  display: block;
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #cec0c0
+}
+.tourist .tourist_en{
+  font-size:0.8rem;
+  margin-left: 10rpx;
+  color: rgb(136, 130, 130);
+}
+.tourist_msg{
+display: flex;
+flex-direction: column
+}
+.name{
+  display: flex;
+  padding: 20rpx 10rpx;
+  align-items: center;
+  height: 35rpx;
+  line-height: 35rpx;
+  border-bottom: 1px solid rgb(224, 202, 202)
+}
+.name .col{
+  font-size: 0.8rem;
+
+}
+.name .col_l{
+  flex:1;
+  font-size: 0.8rem;
+  padding-left: 40rpx;
+}
+/* placeholder */
+input {
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  display: block;
+
+}
+/* .placeh{
+  color: red;
+  vertical-align: bottom
+} */
+.name .must{
+  color:red
+}
+.phone{
+  /* min-height: none;
+  width: auto; */
+  /* width: 30rpx; */
+  height: 42rpx;
+  line-height: 42rpx;
+  padding:  0 20rpx;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  background: rgba(220, 220, 220, 0.699);
+}
+button:not([size='mini']) {
+min-height: 0;
+width: auto;
+margin-left: auto;
+margin-right: auto;
+}
+
+.pay{
+  position: fixed;
+  display: flex;
+  z-index: 9999;
+  justify-content: space-around;
+  bottom: 0;
+  height: 90rpx;
+  background: red;
+  align-items: center;
+  width: 100%;
+  color: #fff
+}
+.btn_pay{
+  padding: 10rpx 30rpx;
+  background: orange;
+  border-radius: 20rpx;
+  color: #fff
+}
+.private_wrap{
+  text-align: center;
+  margin: 20rpx;
+}
+.private_wrap .private{
+  color: green;
+  
+  text-decoration:underline;
+}
